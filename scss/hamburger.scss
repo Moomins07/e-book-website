@@ -1,0 +1,44 @@
+.navbar-toggler {
+  background: transparent;
+  border: none;
+
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff; // Adjust the color as needed
+    transition: all 0.2s;
+
+    & + .icon-bar {
+      margin-top: 4px;
+    }
+  }
+
+  &.collapsed {
+    .top-bar {
+      transform: none;
+    }
+
+    .middle-bar {
+      opacity: 1;
+    }
+
+    .bottom-bar {
+      transform: none;
+    }
+  }
+
+  &:not(.collapsed) {
+    .top-bar {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    .middle-bar {
+      opacity: 0;
+    }
+
+    .bottom-bar {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+  }
+}
